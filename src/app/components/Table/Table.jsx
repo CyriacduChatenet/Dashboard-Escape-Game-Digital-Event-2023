@@ -1,30 +1,24 @@
+import './table.css';
+
 const Table = () => {
   return (
-    <table id="dashboard" cellpadding="0" cellspacing="0">
+    <table class="tg">
+    <thead>
       <tr>
-        <td id="c1">
-          <div class="chartLoadingOverlay">
-            Loading chart please be patient...
-          </div>
-        </td>
-        <td id="c2">
-          <div class="chartLoadingOverlay">
-            Loading chart please be patient...
-          </div>
-        </td>
+        <th class="tg-0pky">Prochaines sessions :</th>
+        <th class="tg-0pky">Nombre d'inscrits :</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0pky">18:30</td>
+        <td class="tg-0pky">6/12</td>
       </tr>
       <tr>
-        <td id="c3">
-          <div class="chartLoadingOverlay">
-            Loading chart please be patient...
-          </div>
-        </td>
-        <td id="c4">
-          <div class="chartLoadingOverlay">
-            Loading chart please be patient...
-          </div>
-        </td>
+        <td class="tg-0pky">18:30</td>
+        <td class="tg-0pky">6/12</td>
       </tr>
+    </tbody>
     </table>
   );
 };
