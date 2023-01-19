@@ -13,7 +13,7 @@ export default defineConfig({
         name: "Dashboard Escape Game",
         short_name: "Dashboard Escape Game",
         description: "Dashboard of escape game workshop of Digital Event 2023 by ESD Bordeaux",
-        theme_color: "#ffffff",
+        theme_color: "#437AE3",
         start_url: "/",
         icons: [
           {
