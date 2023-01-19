@@ -43,6 +43,7 @@ const Timer = ({session}) => {
                 ? <p className="time">00:00:00</p> 
                 : <p className="time">{time}</p>
             }
+
         </div>
     );
 }

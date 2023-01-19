@@ -5,8 +5,9 @@ import HeroBanner from './components/HeroBanner/HeroBanner'
 import Table from './components/Table/Table'
 import Timer from './components/Timer/Timer'
 
-import AirtableConnect from '@theo-gillet/airtable-connect'
 import { useEffect } from 'react'
+
+import AirtableConnect from '../services/airtable/airtableConnect'
 
 const { AirtableData } = AirtableConnect
 
