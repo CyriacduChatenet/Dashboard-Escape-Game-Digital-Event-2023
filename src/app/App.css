@@ -2,5 +2,5 @@
     width: 85vw;
     height: 100vh;
     padding:  0 8rem;
-    background: linear-gradient(180deg, #FFFFFF 0%, #3B517A 0.01%, #447EEF 20.31%, #D493F2 45.83%, #EA8F6A 100%);
+    background-image: url('background.gif');
 }
