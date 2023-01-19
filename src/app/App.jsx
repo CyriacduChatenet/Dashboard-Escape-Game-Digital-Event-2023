@@ -30,7 +30,7 @@ function App() {
         <Banner/>
         <HeroBanner/>
         <Timer session={session}/>
-        <Table/>
+        <Table session={session}/>
       </>
       : null
       }
