@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@theo-gillet/airtable-connect": "^1.0.0",
     "airtable": "^0.11.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
