@@ -1,6 +1,6 @@
 import "./table.css";
 
-const Table = () => {
+const Table = ({ sessions }) => {
   return (
     <table className="tg">
       <thead>
@@ -10,10 +10,14 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="tg-0pky">18:30</td>
-          <td className="tg-0pky">2 / 12</td>
-        </tr>
+        {sessions
+          ? sessions.map((session) => (
+              <tr>
+                <td className="tg-0pky">{session.name}</td>
+                <td className="tg-0pky">2 / 12</td>
+              </tr>
+            ))
+          : null}
       </tbody>
     </table>
   );
