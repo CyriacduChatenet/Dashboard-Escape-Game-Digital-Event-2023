@@ -1,0 +1,26 @@
+.timer {
+  width: 100%;
+  height: 20rem;
+  margin: 2rem 0;
+  background: radial-gradient(
+    59.32% 59.32% at 50% 50%,
+    rgba(255, 255, 255, 0.76) 0%,
+    rgba(255, 255, 255, 0.530417) 28.12%,
+    rgba(255, 255, 255, 0) 78.65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.33));
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.time {
+    color: #3D5A90;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 8rem;
+}

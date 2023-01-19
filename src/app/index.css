@@ -1,0 +1,14 @@
+@import './styles/font.css';
+
+:root {
+    --font-primary: 'JetBrains_Mono';
+    --color-primary: #ffffff;
+}
+
+* {
+    margin:  0;
+    padding: 0;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    overflow: hidden;
+}

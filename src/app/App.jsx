@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import './App.scss'
+import './App.css'
+import Banner from './components/Banner/Banner'
+import HeroBanner from './components/HeroBanner/HeroBanner'
+import Table from './components/Table/Table'
+import Timer from './components/Timer/Timer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <h1>Escape Game</h1>
-      <img src="Diginight_Logo_Bdx_Nantes_White.png" alt="" />
+      <Banner />
+      <HeroBanner/>
+      <Timer/>
+      <Table/>
     </div>
   )
 }
