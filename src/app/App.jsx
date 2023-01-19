@@ -1,32 +1,39 @@
 import { useState } from 'react'
-import { useEffect } from 'react'
-import SessionRepository from '../setup/services/sesssions.service'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import HeroBanner from './components/HeroBanner/HeroBanner'
 import Table from './components/Table/Table'
 import Timer from './components/Timer/Timer'
 
-import { useEffect } from 'react'
-
 import AirtableConnect from '../services/airtable/airtableConnect'
+import { useEffect } from 'react'
 
 const { AirtableData } = AirtableConnect
 
 function App() {
-  const [sessions, setSessions] = useState([]);
-  const sessionService = new SessionRepository;
+  const sessionData = new AirtableData("Session")
+  const [session, setSession] = useState([])
 
   useEffect(() => {
-    sessionService.getAll(setSessions);
-  }, [])
+    sessionData.read((data) => {
+      setInterval(() => {
+        setSession(data)
+
+      }, 1000)
+    })
+  },[])
 
   return (
     <div className="App">
+      {session
+      ? <>
         <Banner/>
         <HeroBanner/>
-        <Timer/>
-        <Table sessions={sessions}/>
+        <Timer session={session}/>
+        <Table session={session}/>
+      </>
+      : null
+      }
     </div>
   )
 }
