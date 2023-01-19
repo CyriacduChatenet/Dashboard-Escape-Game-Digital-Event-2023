@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: "prompt",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
-        name: "websitename",
-        short_name: "websitename",
-        description: "Website description(Could be same with index.html file)",
+        name: "Dashboard Escape Game",
+        short_name: "Dashboard Escape Game",
+        description: "Dashboard of escape game workshop of Digital Event 2023 by ESD Bordeaux",
         theme_color: "#ffffff",
         start_url: "/",
         icons: [
