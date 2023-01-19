@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  width: 50%;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+td {
+  text-align: start;
+  width: 50%;
+  border-bottom: 2px solid #ffffff;
+  font-size: 1.2rem;
+}
+
+tr {
+    height: 4rem;
+}
