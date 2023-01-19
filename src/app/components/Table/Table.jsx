@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import './table.css';
 
-const Table = ({session}) => {
+const Table = ({sessions}) => {
 
   const parseTime = (result) => {
     if(result < 10) {
@@ -29,12 +30,13 @@ const Table = ({session}) => {
     </thead>
     <tbody>
       {
-        session.map((session) => {
+        sessions.map((session) => {
           if(session.fields['Status'] === "closed" && Date.parse(session.fields['Heure début']) > Date.now()){
             return (
               <tr>
                 <td className="tg-0pky">{getTime(session.fields['Heure début'])}</td>
-                <td className="tg-0pky">{session.fields['User'].length} / 12</td>
+                {session.fields.User == undefined ? <td className="tg-0pky">0 / 12</td> : <td className="tg-0pky">{session.fields['User']?.length} / 12</td>}
+                {/* <td className="tg-0pky">{session.fields} / 12</td> */}
               </tr>
             )
           }

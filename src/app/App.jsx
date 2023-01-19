@@ -12,27 +12,29 @@ const { AirtableData } = AirtableConnect
 
 function App() {
   const sessionData = new AirtableData("Session")
-  const [session, setSession] = useState([])
+  const [sessions, setSessions] = useState([])
 
   useEffect(() => {
-    sessionData.read((data) => {
-      setInterval(() => {
-        setSession(data)
-
-      }, 1000)
-    })
+    setInterval(() => {
+      callDate()
+    }, 1000)
   },[])
+
+  const callDate = () => {
+    sessionData.read((data) => {
+      setSessions(data)
+    })
+  }
 
   return (
     <div className="App">
-      {session
-      ? <>
+      {sessions.length > 0 &&
+      <>
         <Banner/>
         <HeroBanner/>
-        <Timer session={session}/>
-        <Table session={session}/>
+        <Timer session={sessions}/>
+        <Table sessions={sessions}/>
       </>
-      : null
       }
     </div>
   )
